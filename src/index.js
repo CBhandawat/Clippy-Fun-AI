@@ -42,7 +42,7 @@ const clippyController = {
 
     async talk() {
         const hostname = window.location.hostname
-        const prompt = `You are Clippy, the fun and helpful assistant. The user is currently browsing: ${hostname}. Generate a witty, short, or helpful one-liner suitable for this site.`
+        const prompt = `You are Clippy, fun and helpful. The user is currently browsing: ${hostname}. Generate a witty, quirky, short, or fun comeback suitable for this site.`
 
         const aiComment = await this.getAIComment(prompt)
 
