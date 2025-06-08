@@ -1,0 +1,60 @@
+{
+    "manifest_version": 3,
+    "name": "Clippy AI",
+    "short_name": "Clippy AI Assistant",
+    "description": "Clippy AI: The classic assistant reborn with an AI twist—right in your browser.",
+    "version": "2.0",
+    "author": "Chaitanya Bandawat",
+    "icons": {
+        "16": "assets/img/clippy-icon-16x16.png",
+        "48": "assets/img/clippy-icon-48x48.png",
+        "128": "assets/img/clippy-icon-128x128.png"
+    },
+    "action": {
+        "default_title": "Clippy AI Assistant",
+        "default_icon": {
+            "16": "assets/img/clippy-icon-gray-48x48.png",
+            "24": "assets/img/clippy-icon-gray-48x48.png",
+            "32": "assets/img/clippy-icon-gray-48x48.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "assets/css/clippy.css"
+            ],
+            "js": [
+                "assets/js/jquery.min.js",
+                "assets/js/clippy.js",
+                "assets/js/agent.js",
+                "src/index.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "background": {
+        "service_worker": "src/state.js",
+        "type": "module"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/img/clippy.map.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
