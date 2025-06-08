@@ -12,6 +12,9 @@ Clippy Fun AI is a playful Chrome extension based on the classic Microsoft Offic
 - Automatic detection of active tabs and idle animations.
 - Fetches and injects AI comments based on current site.
 
+![clippy](https://github.com/user-attachments/assets/99e69388-bbb9-4a3f-ae05-739801fcabef)
+
+
 ---
 
 ## 🚀 Getting Started
